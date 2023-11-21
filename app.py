@@ -1,18 +1,30 @@
 from flask import Flask, request
+from db import stores, items
 
 app = Flask(__name__)
 
-stores = [
-    {
-        "name": "Store 1",
-        "items": [
-            {
-                "name":"Chair",
-                "price": 15.99
-            }
-        ]
-    }
-]
+# stores = [
+#     {
+#         "name": "Store 1",
+#         "items": [
+#             {
+#                 "name":"Chair",
+#                 "price": 15.99
+#             }
+#         ]
+#     }
+# ]
+
+# items = {
+#     1: {
+#         "name": "Chair",
+#         "price": 17.99
+#     },
+#     2: {
+#         "name":"Table"
+#         "price": 180.50
+#     }
+# }
 
 @app.get("/store")
 def get_stores():
